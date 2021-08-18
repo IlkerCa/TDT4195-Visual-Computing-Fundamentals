@@ -1,0 +1,36 @@
+Task 3b
+
+Observe the effect of modifying the value on the resulting rendered image. Deduce
+which of the four distinct transformation types discussed in the lectures and the
+book modifying the value corresponds to. Also write down the direction (axis) the
+transformation applies to
+
+change A:
+Effect: The image is enlarged or reduced in width. 
+Transformation: Scaling
+Axis: x-axis
+
+change B:
+Effect: Tilts the image to the side
+Transformation: Shearing
+Axis: x-axis
+
+change C:
+Effect: Triangles slide left or right
+Transformation: Translation
+Axis: x-axis
+
+change D:
+Effect: One half of the image has been moved downwards, the other half upwards. Furthermore the triangles are tilted away from the center or toward the center. 
+Transformation: Shearing
+Axis: y-axis 
+
+change E:
+Effect: Triangles grow or shrink
+Transformation: Scaling
+Axis: y-axis
+
+change F:
+Effect: Triangles slide up or down
+Transformation: Translation
+Axis: y-axis

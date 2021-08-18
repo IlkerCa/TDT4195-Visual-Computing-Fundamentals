@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build",
+    "\\gloom",
+    "\\gloom\\shaders",
+    "\\gloom\\src",
+    "\\gloom\\vendor",
+    "\\gloom\\vendor\\glfw",
+    "\\gloom\\vendor\\glfw\\src",
+    "\\gloom\\vendor\\glm"
+  ],
+  "SelectedNode": "\\gloom\\vendor\\glfw\\CMake",
+  "PreviewInSolutionExplorer": false
+}

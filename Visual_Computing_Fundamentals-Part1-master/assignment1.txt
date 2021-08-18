@@ -1,0 +1,69 @@
+Task 2a
+
+This phenomenon is called "clipping". If some parts of a triangle appear outside from clipping window, so these parts will not be drawn. The reason behind this
+behavior is perfomance because these parts have not to be rendered which save a lot of computation.
+
+In this example, there are two z-coordinates (1.2 and -1.2) outside of the clipping window which have an effect on the corners (left and right) from the
+triangle. 
+
+
+Task 2b
+
+After inverting the indices, the third triangle is vanished. 
+
+According to lecture notes (chapter 1, page 14), the vertices of a triangle have a clear sequence. When the vertices are ordered counter-clockwise,
+then we can see the front side of the triangle towarding to the viewer view. In the other case (clockwise), the front side are moved away from the viewer
+view looking at its back. This is the reason why the triangle is dissapeared using clockwise ordering.
+
+
+Task 2c
+
+i) What is the purpose of the depth buffer?
+
+The distances of an object in a 3D image can be determined using a z buffer. In the z-buffer representation, bright objects are located further back 
+compared to dark objects that are close to the clipping plane. 
+ 
+
+ii) OpenGL makes a distinction between a Program Object and a Shader Object.
+What is the difference?
+
+OpenGL has a pipeline with several stages attached. Shaders are the stages of this pipeline. These can be individually created and compiled to be
+ linked to the program object. The program object contains the necessary code to execute the shader stages. 
+
+
+iii) What are the two most commonly used types of Shaders? What are the responsibilities of each of them?
+
+There are Vertex Shader and Fragment Shader. The responsibilities of the Vertex Shader is to realize the transformation of each vertices 
+(translating, scaling, rotating, sheering). This ensures that the points are in the correct position, so a model is able
+to move around. Vertex shaders also project the scene onto the camera to describe the world seeing through a camera.
+
+The responsibilities of the Fragment Shader is to determine the desired colour. After determining the fragment shader a colour will assign to a rasterised 
+pixel.
+
+
+iv) The index buffer has a special status within the vertex array object, and is thus
+stored as a separate reference. Why is the index buffer kept separate from the
+vertex attributes
+
+The purpose behind this is that points have coordinates that can be shared by other multiple forms
+ and accessed by the index. Therefore, the image buffer contains the indices of the elements from the Vertex Buffer Object.
+ 
+ 
+v) What is the relation between shader input variables and vertex attributes?
+
+
+
+
+
+
+Task 2d
+Mirror:
+
+The function gl_Position = vec4(position, 1.0f) in the file "simple.vert" takes "position" as parameter. It is also possible to write position in this form
+gl_Position = vec4(-position.x, -position.y, position.z, 1.0f) to access the coordinates. Changing the x and y coordinates (-x, -y, z)
+cause mirroring along the x and y axes. 
+
+Changing color:
+
+In the file "simple.frag" there is an assignment to the color object. By changing the first three values from vec4(1.0f, 1.0f, 1.0f, 1.0f) to
+vec4(1.0f, 0.0f, 0.9f, 1.0f) the colour will change from white to lila/pink.
